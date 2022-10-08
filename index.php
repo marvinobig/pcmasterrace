@@ -12,5 +12,8 @@
 <body>
     <?php require "$cwd/pages/partials/nav.partial.php";?>
 </body>
+<main>
+
+</main>
 
 </html>
