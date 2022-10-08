@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-class DBConnection() 
+class DBConnection
 {
-    public static function make(array $config) : PDO 
+    public static function make(array $config): PDO
     {
-        try 
+        try
         {
             $pdo = new PDO(
                 "{$config['connection']}dbname={$config['name']}",
@@ -13,13 +13,9 @@ class DBConnection()
                 $config['options']
             );
 
-            echo "<p>Connection to database successful.</p>";
-
             return $pdo;
-        } 
-        catch (PDOException $e) 
-        {
-            die("<p>{$e->getMessage()}</p>");
+        } catch (PDOException $e) {
+            die($e->getMessage());
         }
     }
 }
