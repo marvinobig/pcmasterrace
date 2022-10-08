@@ -1,29 +1,27 @@
 <?php
+$root = $_SERVER["DOCUMENT_ROOT"];
+require "$root/core/bootstrap.php";
+
 session_start();
-include "Connect.php";
 
-//gets information from form and puts them in variables//
-if(isset($_POST["username"])){
+try {
     $username = $_POST["username"];
-}
-
-if(isset($_POST["password"])){
     $password = $_POST["password"];
-}
 
-//then looks for account using the variables//
-$sql = "SELECT * FROM users WHERE username = 
-'$username' and password = '$password'";
+    if ($user->GetUser($username, $password)) {
+        $currUser = $user->GetUser($username, $password);
+        $_SESSION["user_id"] = $currUser[0]["ID"];
+        $_SESSION["username"] = $currUser[0]["username"];
+        $_SESSION["email"] = $currUser[0]["email"];
+        $_SESSION["password"] = $currUser[0]["password"];
 
-$result = mysqli_query($con, $sql);
-//once account has been found the details are put in session variables and the user is taken to user page//
-if(mysqli_num_rows($result) == 1){
-    $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
-    header("Location: User.php");
+        var_dump($currUser);
+        header("Location: ../pages/account.page.php");
+        exit;
+    } else {
+        header("Location: ../pages/login.page.php");
+        exit;
+    }
+} catch (Exception $e) {
+    die($e->getmessage());
 }
-
-else{
-    header("Location: ../LoginPage.html"); 
-}
-?>

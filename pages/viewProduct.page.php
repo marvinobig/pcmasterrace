@@ -3,7 +3,6 @@ $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
 
 $id = $_GET["id"];
-// session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,6 +1,8 @@
 <?php
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
+
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

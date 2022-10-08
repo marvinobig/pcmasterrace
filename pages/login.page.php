@@ -30,6 +30,7 @@ require "$root/core/bootstrap.php";
                     Password
                     <input id="password" type="password" name="password" size="30" maxlength="30" required="required" />
                 </label>
+                <button type="submit">Login</button>
             </fieldset>
 
             <p class="join">

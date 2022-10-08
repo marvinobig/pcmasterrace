@@ -20,12 +20,12 @@ class User
         }
     }
 
-    public function GetUserById(int $id): array
+    public function GetUser(string $username, string $password): array
     {
         try {
-            $sql = $this->pdo->prepare("SELECT * FROM users WHERE ID = ?");
+            $sql = $this->pdo->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
 
-            $result = $sql->execute([$id]);
+            $result = $sql->execute([$username, $password]);
 
             return $sql->fetchAll(PDO::FETCH_ASSOC);
         } catch (Exeception $e) {

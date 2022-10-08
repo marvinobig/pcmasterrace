@@ -2,14 +2,14 @@
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
 
-$username;
+session_start();
 
-if (isset($_SESSION["username"])) {
-    $username = $_SESSION["username"];
-} else {
+if (!isset($_SESSION["username"])) {
     header("Location: ../pages/login.page.php");
     exit;
 }
+
+$username = $_SESSION["username"];
 ?>
 <html>
 
