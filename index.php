@@ -15,15 +15,15 @@
     <nav>
         <a class="active" href="index.php">Home</a>
 
+        <a href="pages/products.page.php">Products</a>
+
         <?php if (!isset($_SESSION["username"])): ?>
         <a href="pages/login.page.php">Login</a>
         <a href="pages/register.page.php">Register</a>
         <?php else: ?>
         <a href="pages/account.page.php">Account</a>
-        <?php endif?>
-
-        <a href="pages/products.page.php">Products</a>
         <a href="pages/basket.page.php">Basket</a>
+        <?php endif?>
     </nav>
     <main>
 
