@@ -22,13 +22,15 @@ $product = new Product($pdo);
     <h1>Product Page</h1>
     <main>
         <?php foreach ($product->GetAllProducts() as $item): ?>
-        <div>
-            <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
+        <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
+            <div>
                 <p><?=$item["name"]?></p>
                 <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
                 <p><?=$item["price"]?></p>
-            </a>
-        </div>
+                <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>"></a> <button type="button">Add to
+                    Basket</button>
+            </div>
+        </a>
         <?php endforeach?>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
