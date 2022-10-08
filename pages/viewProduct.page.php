@@ -2,9 +2,7 @@
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
 
-$product = new Product($pdo);
 $id = $_GET["id"];
-
 // session_start();
 ?>
 <!DOCTYPE html>

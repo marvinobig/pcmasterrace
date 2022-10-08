@@ -1,8 +1,6 @@
 <?php
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
-
-$product = new Product($pdo);
 ?>
 <!DOCTYPE html>
 <html lang="en">
