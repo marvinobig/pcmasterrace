@@ -9,7 +9,7 @@ class User
         $this->pdo = $pdo;
     }
 
-    public function PostUser(string $username, string $email, string $password)
+    public function PostUser(string $username, string $email, string $password): void
     {
         try {
             $sql = $this->pdo->prepare("INSERT INTO users(username, email, password) VALUES (?, ?, ?)");
@@ -33,7 +33,7 @@ class User
         }
     }
 
-    public function DeleteUserById(int $id)
+    public function DeleteUserById(int $id): void
     {
         try {
             $sql = $this->pdo->prepare("SELECT * FROM users WHERE ID = ?");

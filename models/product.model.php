@@ -9,7 +9,7 @@ class Product
         $this->pdo = $pdo;
     }
 
-    public function PostProduct(string $name, string $description, float $price, string $image)
+    public function PostProduct(string $name, string $description, float $price, string $image): void
     {
         try {
             $sql = $this->pdo->prepare("INSERT INTO products(name, description, price, image) VALUES (?, ?, ?, ?)");
