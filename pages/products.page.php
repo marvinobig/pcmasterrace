@@ -27,8 +27,9 @@ $product = new Product($pdo);
                 <p><?=$item["name"]?></p>
                 <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
                 <p><?=$item["price"]?></p>
-                <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>"></a> <button type="button">Add to
-                    Basket</button>
+                <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>">
+                    <button type="button">Add to Basket</button>
+                </a>
             </div>
         </a>
         <?php endforeach?>
