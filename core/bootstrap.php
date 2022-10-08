@@ -1,12 +1,12 @@
 <?php
 
-$cwd = getcwd();
+$root = $_SERVER["DOCUMENT_ROOT"];
 
-require_once "$cwd/models/basket.model.php";
-require_once "$cwd/models/product.model.php";
-require_once "$cwd/models/user.model.php";
-require_once "$cwd/core/db/dbConnect.php";
+require_once "$root/models/basket.model.php";
+require_once "$root/models/product.model.php";
+require_once "$root/models/user.model.php";
+require_once "$root/core/db/dbConnect.php";
 
-$config = require "$cwd/config.php";
+$config = require "$root/config.php";
 
 $pdo = DBConnection::make($config["database"]);
