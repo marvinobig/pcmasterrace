@@ -1,20 +1,13 @@
 <?php
-include ("Connect.php");
-//gets id from dynamic link//
-$id = $_REQUEST["ID"];
-$sql = "SELECT * FROM basket WHERE prodID = '". 
-    $id . "' ";
-//uses information to find basket data using id//
-$sql = "DELETE FROM basket WHERE prodID = '$id'";
-//once deleted, the user is taken to basket page to view results//
-if(mysqli_query($con, $sql)){
-    header("Location: Basket.php");
-}
+$root = $_SERVER["DOCUMENT_ROOT"];
+require "$root/core/bootstrap.php";
 
-else
-    
-{
-    echo mysqli_error($con);
-}
+try {
+    $id = $_GET["id"];
+    $basket->RemoveFromBasket($id);
 
-?>
+    header("Location: ../pages/basket.page.php");
+    exit;
+} catch (Exeception $e) {
+    die($e->getmessage());
+}

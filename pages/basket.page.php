@@ -1,6 +1,15 @@
 <?php
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
+
+$username;
+
+if (isset($_SESSION["username"])) {
+    $username = $_SESSION["username"];
+} else {
+    header("Location: ../pages/login.page.php");
+    exit;
+}
 ?>
 <html>
 
@@ -20,7 +29,7 @@ require "$root/core/bootstrap.php";
     <main>
         <h1>Basket</h1>
 
-        <?php foreach ($basket->loadBasket() as $item): ?>
+        <?php foreach ($basket->LoadBasket($username) as $item): ?>
         <div>
             <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
                 <p><?=$item["name"]?></p>
