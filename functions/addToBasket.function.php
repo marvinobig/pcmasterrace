@@ -11,7 +11,7 @@ try {
     }
 
     $username = $_SESSION["username"];
-    $id = $_GET["id"];
+    $id = intval($_GET["id"]);
     $basket->AddToBasket($id, $username);
 
     header("Location: ../pages/basket.page.php");

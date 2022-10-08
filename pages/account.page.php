@@ -45,10 +45,7 @@ $username = $_SESSION["username"];
             <?php endforeach?>
         </section>
 
-        <?php print_r($_SESSION["username"])?>
-        <?php print_r($_SESSION["user_id"])?>
-        <?php print_r($_SESSION["email"])?>
-        <?php print_r($_SESSION["password"])?>
+        <a href="userSettings.page.php"><button type="button">Settings</button></a>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
 </body>

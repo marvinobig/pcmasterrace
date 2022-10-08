@@ -34,7 +34,7 @@ $username = $_SESSION["username"];
             <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
                 <p><?=$item["name"]?></p>
                 <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
-                <p><?=$item["price"]?></p>
+                <p>£<?=$item["price"]?></p>
                 <a href="../functions/deleteFromBasket.function.php?id=<?=$item["ID"]?>">
                     <button type="button">Remove</button>
                 </a>
