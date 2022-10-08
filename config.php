@@ -2,7 +2,7 @@
 
 return [
     "database" => [
-        "name" => "tasks",
+        "name" => "pc_master_race",
         "username" => "root",
         "password" => "",
         "connection" => "mysql:host=127.0.0.1;",
