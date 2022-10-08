@@ -15,7 +15,6 @@ try {
         $_SESSION["email"] = $currUser[0]["email"];
         $_SESSION["password"] = $currUser[0]["password"];
 
-        var_dump($currUser);
         header("Location: ../pages/account.page.php");
         exit;
     } else {

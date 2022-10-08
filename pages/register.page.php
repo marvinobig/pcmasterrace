@@ -44,16 +44,17 @@ require "$root/core/bootstrap.php";
                         title="Must be 5 digits long or over and contain no special characters or numbers." size="30"
                         maxlength="30" placeholder="Enter Password" id="conPassword" required />
                 </label>
-
-                <p>
-                    By creating an account you agree to our <a href="#">Terms & Privacy</a>
-                </p>
+                <button type="submit">Register</button>
             </fieldset>
         </form>
-
-        <p class="login">
-            Already a member? <a href="../pages/login.page.php">You can login here</a>
-        </p>
+        <div>
+            <p>
+                By creating an account you agree to our <a href="#">Terms & Privacy</a>
+            </p>
+            <p class="login">
+                Already a member? <a href="../pages/login.page.php">You can login here</a>
+            </p>
+        </div>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
 </body>
