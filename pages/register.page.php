@@ -45,7 +45,7 @@ if (isset($_SESSION["username"])) {
                 <button type="submit">Register</button>
             </fieldset>
         </form>
-        <div>
+        <div class="user-agreements">
             <p>
                 By creating an account you agree to our <a href="#">Terms & Privacy</a>
             </p>

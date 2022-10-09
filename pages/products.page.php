@@ -12,19 +12,25 @@ session_start();
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <h1>Product Page</h1>
-        <?php foreach ($product->GetAllProducts() as $item): ?>
-        <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
-            <div>
-                <p><?=$item["name"]?></p>
-                <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
-                <p><?=$item["price"]?></p>
-                <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>">
-                    <button type="button">Add to Basket</button>
+        <h1 class="page-title">Product Page</h1>
+        <section class="product-card-container">
+            <?php foreach ($product->GetAllProducts() as $item): ?>
+            <div class="product-card">
+                <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
+                    <img src=" <?=$item["image"]?>" alt="<?=$item["name"]?>">
+                    <section class="info">
+                        <p><?=$item["name"]?></p>
+                        <p>£<strong><?=$item["price"]?></strong></p>
+                    </section>
+                    <section class="addBtn-container">
+                        <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>">
+                            <button type="button">Add</button>
+                        </a>
+                    </section>
                 </a>
             </div>
-        </a>
-        <?php endforeach?>
+            <?php endforeach?>
+        </section>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
 </body>

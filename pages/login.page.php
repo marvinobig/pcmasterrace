@@ -31,11 +31,13 @@ if (isset($_SESSION["username"])) {
                 </label>
                 <button type="submit">Login</button>
             </fieldset>
+        </form>
 
-            <p class="join">
+        <div class="user-agreements">
+            <p>
                 Not yet a member? <a href="../pages/register.page.php">You can register here</a>
             </p>
-        </form>
+        </div>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
 </body>
