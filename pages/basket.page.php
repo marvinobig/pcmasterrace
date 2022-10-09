@@ -19,22 +19,26 @@ $username = $_SESSION["username"];
     <?php require "$root/pages/partials/nav.partial.php";?>
 
     <main>
-        <h1>Basket</h1>
+        <h1 class="page-title">Basket</h1>
 
-        <?php foreach ($basket->LoadBasket($username) as $item): ?>
-        <div>
-            <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
-                <p><?=$item["name"]?></p>
+        <section class="basket-item-container">
+            <?php foreach ($basket->LoadBasket($username) as $item): ?>
+            <div class="basket-item-card">
                 <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
-                <p>£<?=$item["price"]?></p>
-                <a href="../functions/deleteFromBasket.function.php?id=<?=$item["ID"]?>">
-                    <button type="button">Remove</button>
-                </a>
-            </a>
-        </div>
-        <?php endforeach?>
+                <div class="product-info">
+                    <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
+                        <p><?=$item["name"]?></p>
+                    </a>
+                    <p>£<?=$item["price"]?></p>
+                    <a href="../functions/deleteFromBasket.function.php?id=<?=$item["ID"]?>">
+                        <button type="button">Remove</button>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach?>
+        </section>
 
-        <div>
+        <section class="basket-actions-container">
             <a href="products.page.php">
                 <button type="button">
                     Continue Shopping
@@ -43,7 +47,7 @@ $username = $_SESSION["username"];
             <a href="#">
                 <button type="button">Checkout</button>
             </a>
-        </div>
+        </section>
     </main>
 
     <?php include "$root/pages/partials/footer.partial.php";?>
