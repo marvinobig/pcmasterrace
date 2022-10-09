@@ -1,6 +1,13 @@
 <?php
 $root = $_SERVER["DOCUMENT_ROOT"];
 require "$root/core/bootstrap.php";
+
+session_start();
+
+if (isset($_SESSION["username"])) {
+    header("Location: account.page.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
