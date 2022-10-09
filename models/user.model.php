@@ -36,7 +36,7 @@ class User
     public function DeleteUserById(int $id): void
     {
         try {
-            $sql = $this->pdo->prepare("SELECT * FROM users WHERE ID = ?");
+            $sql = $this->pdo->prepare("DELETE FROM users WHERE ID = ?");
 
             $sql->execute([$id]);
         } catch (Exeception $e) {
