@@ -20,6 +20,16 @@ $username = $_SESSION["username"];
 
     <main>
         <h1 class="page-title">Basket</h1>
+        <section class="basket-actions-container">
+            <a href="products.page.php">
+                <button type="button">
+                    Continue Shopping
+                </button>
+            </a>
+            <a href="#">
+                <button type="button">Checkout</button>
+            </a>
+        </section>
 
         <section class="basket-item-container">
             <?php foreach ($basket->LoadBasket($username) as $item): ?>
@@ -38,16 +48,6 @@ $username = $_SESSION["username"];
             <?php endforeach?>
         </section>
 
-        <section class="basket-actions-container">
-            <a href="products.page.php">
-                <button type="button">
-                    Continue Shopping
-                </button>
-            </a>
-            <a href="#">
-                <button type="button">Checkout</button>
-            </a>
-        </section>
     </main>
 
     <?php include "$root/pages/partials/footer.partial.php";?>

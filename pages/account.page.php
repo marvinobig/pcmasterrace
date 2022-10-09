@@ -18,26 +18,37 @@ $username = $_SESSION["username"];
 
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
-    <main>
-        <p>Welcome, <?=$_SESSION["username"]?></p>
-        <a href="../functions/logout.function.php">
-            <button type="button">Logout</button>
-        </a>
+    <main class="user-account">
+        <section class="user-welcome">
+            <h1 class="page-title">Welcome, <?=$_SESSION["username"]?></h1>
+            <div class="account-actions">
+                <a href="userSettings.page.php"><button type="button">Settings</button></a>
+                <a href="../functions/logout.function.php">
+                    <button type="button">Logout</button>
+                </a>
+            </div>
+        </section>
 
-        <section>
-            <h3>Items in Basket</h3>
-            <?php foreach ($basket->LoadBasket($username) as $item): ?>
-            <div>
+        <h3>Items in Basket</h3>
+        <section class="product-card-container">
+            <?php foreach ($product->GetAllProducts() as $item): ?>
+            <div class="product-card">
                 <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
-                    <p><?=$item["name"]?></p>
-                    <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
-                    <p>£<?=$item["price"]?></p>
+                    <img src=" <?=$item["image"]?>" alt="<?=$item["name"]?>">
+                    <section class="info">
+                        <p><?=$item["name"]?></p>
+                        <p>£<strong><?=$item["price"]?></strong></p>
+                    </section>
+                    <section class="addBtn-container">
+                        <a href="../functions/addToBasket.function.php?id=<?=$item["ID"]?>">
+                            <button type="button">Add</button>
+                        </a>
+                    </section>
                 </a>
             </div>
             <?php endforeach?>
         </section>
 
-        <a href="userSettings.page.php"><button type="button">Settings</button></a>
     </main>
     <?php include "$root/pages/partials/footer.partial.php";?>
 </body>
