@@ -30,18 +30,14 @@ if (!isset($_SESSION["username"])) {
                     <input name="password" type="password" placeholder="Enter Password" id="password"
                         value=<?=$_SESSION["password"]?> disabled />
                 </label>
-                <label for="password">
+                <label for="newPass">
                     New Password
-                    <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
+                    <input pattern="[a-z][A-Z][0-9]{5+}" name="newPass" type="password"
                         title="Must be 5 digits long or over and contain no special characters or numbers."
-                        maxlength="30" placeholder="Enter New Password" id="password" />
+                        maxlength="30" placeholder="Enter New Password" id="newPass" />
                 </label>
+                <button type="submit">Update</button>
             </fieldset>
-            <div>
-                <a href="#">
-                    <button type="submit">Update</button>
-                </a>
-            </div>
         </form>
         <div>
             <a href="#">

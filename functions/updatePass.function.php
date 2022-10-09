@@ -1,32 +1,19 @@
 <?php
-include ("Connect.php");
+$root = $_SERVER["DOCUMENT_ROOT"];
+require "$root/core/bootstrap.php";
 
-//gets username and password from the form//
-if(isset($_POST["username"])){
-    $username = $_POST["username"];
+session_start();
 
+try {
+    $username = $_SESSION["username"];
+    $password = $_POST["newPass"];
+
+    $user->UpdateUserPass($password, $username);
+    $newPass = $user->GetUser($username, $password);
+    $_SESSION["password"] = $newPass[0]["password"];
+
+    header("Location: ../pages/userSettings.page.php");
+    exit;
+} catch (Exception $e) {
+    die($e->getmessage());
 }
-
-if(isset($_POST["password"])){
-    $password = $_POST["password"];
-}
-
-//uses above variables to update password using the username to find the account within the users table//
-$sql = "UPDATE users SET password='$password' WHERE username = '$username'";
-//takes the user to login page to login with updated details//
-if(mysqli_query($con, $sql)){
-    header("Location: ../LoginPage.html");
-
-}
-
-else{
-    
-    echo mysqli_error($con);
-
-}
-
-?>
-    
-    
-    
-    
