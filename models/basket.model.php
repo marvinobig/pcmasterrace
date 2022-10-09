@@ -14,7 +14,7 @@ class Basket
         try {
             $sql = $this->pdo->prepare("INSERT INTO basket(ProdID, username) VALUES (?, ?)");
 
-            $sql->execute([$prodId, "$username"]);
+            $sql->execute([$prodId, $username]);
         } catch (Exeception $e) {
             die($e->getMessage());
         }
@@ -25,7 +25,7 @@ class Basket
         try {
             $sql = $this->pdo->prepare("SELECT * FROM basket JOIN products ON basket.prodID = products.ID WHERE basket.username= ?");
 
-            $result = $sql->execute(["$username"]);
+            $result = $sql->execute([$username]);
 
             return $sql->fetchAll(PDO::FETCH_ASSOC);
         } catch (Exeception $e) {

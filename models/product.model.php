@@ -14,7 +14,7 @@ class Product
         try {
             $sql = $this->pdo->prepare("INSERT INTO products(name, description, price, image) VALUES (?, ?, ?, ?)");
 
-            $sql->execute(["$name", "$description", $price, "$image"]);
+            $sql->execute([$name, $description, $price, $image]);
         } catch (Exeception $e) {
             die($e->getMessage());
         }
