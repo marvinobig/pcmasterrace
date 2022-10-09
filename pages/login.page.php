@@ -16,11 +16,11 @@ require "$root/core/bootstrap.php";
 
                 <label for="username">
                     Username
-                    <input id="username" type="text" name="username" size="30" maxlength="30" required="required" />
+                    <input id="username" type="text" name="username" maxlength="30" required="required" />
                 </label>
                 <label for="password">
                     Password
-                    <input id="password" type="password" name="password" size="30" maxlength="30" required="required" />
+                    <input id="password" type="password" name="password" maxlength="30" required="required" />
                 </label>
                 <button type="submit">Login</button>
             </fieldset>

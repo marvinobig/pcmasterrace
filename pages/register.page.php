@@ -16,24 +16,23 @@ require "$root/core/bootstrap.php";
 
                 <label for="username">
                     Username
-                    <input type="text" name="username" size="30" maxlength="30" placeholder="Enter Username"
-                        id="username" required />
+                    <input type="text" name="username" maxlength="30" placeholder="Enter Username" id="username"
+                        required />
                 </label>
                 <label for="email">
                     Email
-                    <input type="email" name="email" size="30" maxlength="30" placeholder="Enter Email" id="email"
-                        required />
+                    <input type="email" name="email" maxlength="30" placeholder="Enter Email" id="email" required />
                 </label>
                 <label for="password">
                     Password
                     <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
-                        title="Must be 5 digits long or over and contain no special characters or numbers." size="30"
+                        title="Must be 5 digits long or over and contain no special characters or numbers."
                         maxlength="30" placeholder="Enter Password" id="password" required />
                 </label>
                 <label for="conPassword">
                     Confirm Password
                     <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
-                        title="Must be 5 digits long or over and contain no special characters or numbers." size="30"
+                        title="Must be 5 digits long or over and contain no special characters or numbers."
                         maxlength="30" placeholder="Enter Password" id="conPassword" required />
                 </label>
                 <button type="submit">Register</button>

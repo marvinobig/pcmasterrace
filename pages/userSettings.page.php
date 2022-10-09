@@ -17,29 +17,24 @@ if (!isset($_SESSION["username"])) {
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form method="post" action="../functions/createUser.function.php">
+        <div>
+            <h1>Settings</h1>
+            <p>Username: <?=$_SESSION["username"]?></p>
+            <p>Email: <?=$_SESSION["email"]?></p>
+        </div>
+        <form method="post" action="../functions/updatePass.function.php">
             <fieldset>
-                <legend>Settings</legend>
-
-                <label for="username">
-                    Username
-                    <input type="text" name="username" size="30" maxlength="30" placeholder="Enter Username"
-                        id="username" value=<?=$_SESSION["username"]?> disabled />
-                </label>
-                <label for="email">
-                    Email
-                    <input type="email" name="email" size="30" maxlength="30" placeholder="Enter Email" id="email"
-                        value=<?=$_SESSION["email"]?> disabled />
+                <legend>Change Password</legend>
+                <label for="password">
+                    Old Password
+                    <input name="password" type="password" placeholder="Enter Password" id="password"
+                        value=<?=$_SESSION["password"]?> disabled />
                 </label>
                 <label for="password">
-                    Password
+                    New Password
                     <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
-                        title="Must be 5 digits long or over and contain no special characters or numbers." size="30"
-                        maxlength="30" placeholder="Enter Password" id="password" value=<?=$_SESSION["password"]?>
-                        disabled />
-                    <a href="#">
-                        <button type="button">Change</button>
-                    </a>
+                        title="Must be 5 digits long or over and contain no special characters or numbers."
+                        maxlength="30" placeholder="Enter New Password" id="password" />
                 </label>
             </fieldset>
             <div>
