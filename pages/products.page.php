@@ -11,8 +11,8 @@ session_start();
 
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
-    <h1>Product Page</h1>
     <main>
+        <h1>Product Page</h1>
         <?php foreach ($product->GetAllProducts() as $item): ?>
         <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
             <div>
