@@ -5,6 +5,10 @@
     font-size: 1.2rem;
     --nav-bg-color: #201e1e;
     --nav-text-color: #ebdede;
+    --footer-bg-color: #201e1e;
+    --footer-text-color: #ebdede;
+    --border-radius: 2px;
+    --brightness: 80%;
 }
 
 body {
@@ -45,3 +49,35 @@ main {
     background-color: var(--nav-bg-color);
 }
 
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+.footer-title-container, .footer-socials-container, .footer-title, .footer-socials-title {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+.footer-title-container, .footer-socials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-socials-link {
+    text-align: center;
+    width: 120px;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+}
+
+.footer-socials-link:hover {
+    filter: brightness(var(--brightness));
+}
