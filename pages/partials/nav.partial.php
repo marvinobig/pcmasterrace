@@ -9,8 +9,8 @@
         <a class="nav-links" href="register.page.php">Register</a>
 
         <?php else: ?>
-        <a class="nav-links" href="account.page.php">Account</a>
         <a class="nav-links" href="basket.page.php">Basket</a>
+        <a class="nav-links" href="account.page.php">Account</a>
         <?php endif?>
     </div>
 </nav>
