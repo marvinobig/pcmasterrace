@@ -114,6 +114,16 @@ fieldset {
     border-radius: var(--border-radius);
 }
 
+textarea {
+    resize: none;
+    height: 240px;
+    width: 100%;
+    border: none;
+}
+
+textarea:focus {
+    outline: none;
+}
 
 /* specific styling */
 .nav {
