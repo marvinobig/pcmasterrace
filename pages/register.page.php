@@ -42,6 +42,10 @@ if (isset($_SESSION["username"])) {
                         title="Must be 5 digits long or over and contain no special characters or numbers."
                         maxlength="30" placeholder="Enter Password" id="conPassword" required />
                 </label>
+                <label for="admin">
+                    Register as Admin
+                    <input type="checkbox" name="admin" maxlength="30" id="admin" />
+                </label>
                 <button type="submit">Register</button>
             </fieldset>
         </form>

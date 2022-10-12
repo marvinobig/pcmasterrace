@@ -6,8 +6,9 @@ try {
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
+    $admin = boolval($_POST["admin"]);
 
-    $user->PostUser($username, $email, $password);
+    $user->PostUser($username, $email, $password, $admin);
 
     header("Location: ../pages/login.page.php");
     exit;
