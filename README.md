@@ -10,3 +10,13 @@ The website produced is called “The PC Master Race” and it is an e-commerce 
 - JavaScript
 - CSS
 - HTML
+
+## Features
+
+- View all products
+- View individual products
+- Add products to basket
+- Create and login to account
+- Update your password or delete your account
+- Admin page only accessible by users with a role of admin
+- Add products to website through admin page.
