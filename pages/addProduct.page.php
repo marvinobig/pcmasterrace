@@ -30,8 +30,8 @@ require "$root/core/bootstrap.php";
                 </label>
                 <label for="price">
                     Price
-                    <input type="number" name="price" maxlength="30" placeholder="Enter Product Price" id="price"
-                        required />
+                    <input type="number" name="price" maxlength="30" step="0.01" placeholder="Enter Product Price"
+                        id="price" required />
                 </label>
                 <label for="Description">
                     <textarea name="description" id="description" placeholder="Enter Product Description"></textarea>

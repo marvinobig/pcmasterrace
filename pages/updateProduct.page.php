@@ -23,7 +23,7 @@ $singleProduct = $product->GetProductById(intval($id));
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form action="../functions/updateProduct.function.php?<?=$id?>" method="post">
+        <form action="../functions/updateProduct.function.php?id=<?=$id?>" method="post">
             <fieldset>
                 <legend>Update a Product</legend>
 
@@ -34,8 +34,8 @@ $singleProduct = $product->GetProductById(intval($id));
                 </label>
                 <label for="price">
                     Price
-                    <input type="number" name="price" maxlength="30" placeholder="Enter Product Price" id="price"
-                        value="<?=$singleProduct[0]["price"]?>" required />
+                    <input type="number" name="price" maxlength="30" step="0.01" placeholder="Enter Product Price"
+                        id="price" value="<?=$singleProduct[0]["price"]?>" required />
                 </label>
                 <label for="Description">
                     <textarea name="description" id="description"
