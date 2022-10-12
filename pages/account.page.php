@@ -23,6 +23,11 @@ $username = $_SESSION["username"];
             <h1 class="page-title">Welcome, <?=$_SESSION["username"]?></h1>
             <div class="account-actions">
                 <a href="userSettings.page.php"><button type="button">Settings</button></a>
+                <?php if (isset($_SESSION["admin"]) && boolval($_SESSION["admin"])): ?>
+                <a href="admin.page.php">
+                    <button type="button">Admin</button>
+                </a>
+                <?php endif?>
                 <a href="../functions/logout.function.php">
                     <button type="button">Logout</button>
                 </a>
