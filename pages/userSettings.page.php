@@ -18,8 +18,11 @@ if (!isset($_SESSION["username"])) {
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main class="user-settings">
         <h1 class="page-title">Settings</h1>
-        <p><b>Username:</b> <?=$_SESSION["username"]?></p>
-        <p><b>Email:</b> <?=$_SESSION["email"]?></p>
+        <section class="user-info">
+            <p><b>Username:</b> <?=$_SESSION["username"]?></p>
+            <p><b>Email:</b> <?=$_SESSION["email"]?></p>
+        </section>
+
 
         <section>
             <form method="post" action="../functions/updatePass.function.php">

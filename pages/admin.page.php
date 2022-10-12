@@ -19,7 +19,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
 
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
-    <main>
+    <main class="admin">
         <h1 class="page-title">Admin</h1>
         <div class="admin-actions">
             <a href="addProduct.page.php"><button type="button">Add Product</button></a>
@@ -36,12 +36,13 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
                         <p>£<strong><?=$item["price"]?></strong></p>
                     </section>
                     <section class="Btn-container">
-                        <a href="updateProduct.page.php?id=<?=$item["ID"]?>">
-                            <button type="button">Update</button>
-                        </a>
-                        <a href="../functions/deleteProduct.function.php?id=<?=$item["ID"]?>">
-                            <button type="button">Remove</button>
-                        </a>
+
+                        <button type="button"><a href="updateProduct.page.php?id=<?=$item["ID"]?>">Update</a></button>
+
+
+                        <button type="button"><a
+                                href="../functions/deleteProduct.function.php?id=<?=$item["ID"]?>">Remove</a></button>
+
                     </section>
                 </a>
             </div>

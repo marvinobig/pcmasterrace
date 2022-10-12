@@ -316,3 +316,47 @@ textarea:focus {
     align-items: center;
     gap: 20px;
 }
+
+.admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.Btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.Btn-container a{
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.view-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.product-img {
+    max-width: 600px;
+}

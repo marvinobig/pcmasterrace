@@ -13,9 +13,10 @@ session_start();
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
 
-    <main>
+    <main class="view-product">
         <?php foreach ($product->GetProductById($id) as $item): ?>
-        <img src="data:image/jpeg;base64,<?=base64_encode($item["image"])?>">
+        <img src="data:image/jpeg;base64,<?=base64_encode($item["image"])?>" alt="<?=$item["name"]?>"
+            class="product-img">
         <h2><?=$item["name"]?></h2>
         <p>£<?=$item["price"]?></p>
         <h3>Description</h3>
