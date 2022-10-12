@@ -17,7 +17,8 @@ if (isset($_SESSION["username"])) {
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form method="post" action="../functions/createUser.function.php" id="registerForm">
+        <form method="post" action="../functions/createUser.function.php" id="registerForm"
+            enctype="multipart/form-data">
             <fieldset>
                 <legend>Registration</legend>
 
@@ -45,6 +46,11 @@ if (isset($_SESSION["username"])) {
                 <label for="admin">
                     Register as Admin
                     <input type="checkbox" name="admin" maxlength="30" id="admin" />
+                </label>
+                <label for="image">
+                    Image
+                    <input name="image" type="file" maxlength="30" placeholder="Upload Product Image" id="image"
+                        accept="image/png, image/jpeg" required />
                 </label>
                 <button type="submit">Register</button>
             </fieldset>

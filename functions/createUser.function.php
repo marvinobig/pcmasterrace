@@ -7,8 +7,14 @@ try {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $admin = boolval($_POST["admin"]);
+    $imageData = file_get_contents($_FILES["image"]["tmp_name"]);
+    $imageType = $_FILES["image"]["type"];
 
-    $user->PostUser($username, $email, $password, $admin);
+    if (!substr($imageType, 0, 5) === "image") {
+        throw new Exception("The file you uploaded isn't an image");
+    }
+
+    $user->PostUser($username, $email, $password, $admin, $imageData);
 
     header("Location: ../pages/login.page.php");
     exit;

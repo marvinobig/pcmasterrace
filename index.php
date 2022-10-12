@@ -22,6 +22,9 @@
     </nav>
 
     <main>
+        <p class="welcome">
+            Welcome to PC Master Race. Sign up and buy your pc parts now.
+        </p>
 
     </main>
 

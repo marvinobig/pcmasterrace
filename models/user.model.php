@@ -9,12 +9,12 @@ class User
         $this->pdo = $pdo;
     }
 
-    public function PostUser(string $username, string $email, string $password, bool $admin): void
+    public function PostUser(string $username, string $email, string $password, bool $admin, string $image): void
     {
         try {
-            $sql = $this->pdo->prepare("INSERT INTO users(username, email, password, admin) VALUES (?, ?, ?, ?)");
+            $sql = $this->pdo->prepare("INSERT INTO users(username, email, password, admin, image) VALUES (?, ?, ?, ?, ?)");
 
-            $sql->execute([$username, $email, $password, $admin]);
+            $sql->execute([$username, $email, $password, $admin, $image]);
         } catch (Exeception $e) {
             die($e->getMessage());
         }

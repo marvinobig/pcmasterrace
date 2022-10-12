@@ -50,6 +50,7 @@ main {
 
 img {
     aspect-ratio: 1;
+    height: auto;
     width: 100%;
     max-width: 200px;
     border-radius: var(--border-radius) var(--border-radius);

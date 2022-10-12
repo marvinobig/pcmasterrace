@@ -15,6 +15,7 @@ try {
         $_SESSION["email"] = $currUser[0]["email"];
         $_SESSION["password"] = $currUser[0]["password"];
         $_SESSION["admin"] = $currUser[0]["admin"];
+        $_SESSION["image"] = $currUser[0]["image"];
 
         header("Location: ../pages/account.page.php");
         exit;

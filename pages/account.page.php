@@ -21,6 +21,7 @@ $username = $_SESSION["username"];
     <main class="user-account">
         <section class="user-welcome">
             <h1 class="page-title">Welcome, <?=$_SESSION["username"]?></h1>
+            <img src="data:image/jpeg;base64,<?=base64_encode($_SESSION["image"])?>" alt="<?=$_SESSION["username"]?>">
             <div class="account-actions">
                 <a href="userSettings.page.php"><button type="button">Settings</button></a>
                 <?php if (isset($_SESSION["admin"]) && boolval($_SESSION["admin"])): ?>
