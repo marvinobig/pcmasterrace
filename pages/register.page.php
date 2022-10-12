@@ -17,7 +17,7 @@ if (isset($_SESSION["username"])) {
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form method="post" action="../functions/createUser.function.php">
+        <form method="post" action="../functions/createUser.function.php" id="registerForm">
             <fieldset>
                 <legend>Registration</legend>
 
@@ -32,13 +32,13 @@ if (isset($_SESSION["username"])) {
                 </label>
                 <label for="password">
                     Password
-                    <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
+                    <input name="password" type="password"
                         title="Must be 5 digits long or over and contain no special characters or numbers."
                         maxlength="30" placeholder="Enter Password" id="password" required />
                 </label>
                 <label for="conPassword">
                     Confirm Password
-                    <input pattern="[a-z][A-Z][0-9]{5+}" name="password" type="password"
+                    <input name="password" type="password"
                         title="Must be 5 digits long or over and contain no special characters or numbers."
                         maxlength="30" placeholder="Enter Password" id="conPassword" required />
                 </label>
