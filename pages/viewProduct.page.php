@@ -15,7 +15,7 @@ session_start();
 
     <main>
         <?php foreach ($product->GetProductById($id) as $item): ?>
-        <img src="Images/<?=$item["image"]?>">
+        <img src="data:image/jpeg;base64,<?=base64_encode($item["image"])?>">
         <h2><?=$item["name"]?></h2>
         <p>£<?=$item["price"]?></p>
         <h3>Description</h3>

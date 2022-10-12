@@ -20,7 +20,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form action="../functions/addProduct.function.php" method="post">
+        <form action="../functions/addProduct.function.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>Add a Product</legend>
 
@@ -39,7 +39,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
                 <label for="image">
                     Image
                     <input name="image" type="file" maxlength="30" placeholder="Upload Product Image" id="image"
-                        required />
+                        accept="image/png, image/jpeg" required />
                 </label>
                 <button type="submit">Add</button>
             </fieldset>

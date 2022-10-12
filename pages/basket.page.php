@@ -34,7 +34,7 @@ $username = $_SESSION["username"];
         <section class="basket-item-container">
             <?php foreach ($basket->LoadBasket($username) as $item): ?>
             <div class="basket-item-card">
-                <img src="<?=$item["image"]?>" alt="<?=$item["name"]?>">
+                <img src="data:image/jpeg;base64,<?=base64_encode($item["image"])?>" alt="<?=$item["name"]?>">
                 <div class="product-info">
                     <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
                         <p><?=$item["name"]?></p>

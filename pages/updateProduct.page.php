@@ -23,7 +23,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
     <main>
-        <form action="../functions/updateProduct.function.php?id=<?=$id?>" method="post">
+        <form action="../functions/updateProduct.function.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>Update a Product</legend>
 
@@ -44,7 +44,7 @@ if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
                 <label for="image">
                     Image
                     <input name="image" type="file" maxlength="30" placeholder="Upload Product Image" id="image"
-                        value="<?=$singleProduct[0]["image"]?>" required />
+                        accept="image/png, image/jpeg" required />
                 </label>
                 <button type="submit">Update</button>
             </fieldset>

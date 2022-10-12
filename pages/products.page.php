@@ -17,7 +17,7 @@ session_start();
             <?php foreach ($product->GetAllProducts() as $item): ?>
             <div class="product-card">
                 <a href="viewProduct.page.php?id=<?=$item["ID"]?>">
-                    <img src=" <?=$item["image"]?>" alt="<?=$item["name"]?>">
+                    <img src="data:image/jpeg;base64,<?=base64_encode($item["image"])?>" alt="<?=$item["name"]?>">
                     <section class="info">
                         <p><?=$item["name"]?></p>
                         <p>£<strong><?=$item["price"]?></strong></p>
