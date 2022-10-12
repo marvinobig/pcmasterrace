@@ -5,15 +5,15 @@ require "$root/core/bootstrap.php";
 $id = $_GET["id"];
 $singleProduct = $product->GetProductById(intval($id));
 
-// session_start();
+session_start();
 
-// if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
-//     header("Location: account.page.php");
-//     exit;
-// } else if (!boolval($_SESSION["admin"])) {
-//     header("Location: account.page.php");
-//     exit;
-// }
+if (!isset($_SESSION["username"]) && !isset($_SESSION["admin"])) {
+    header("Location: account.page.php");
+    exit;
+} else if (!boolval($_SESSION["admin"])) {
+    header("Location: account.page.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
