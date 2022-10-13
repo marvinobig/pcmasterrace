@@ -6,7 +6,7 @@ The website produced is called “The PC Master Race” and it is an e-commerce 
 
 - PHP (version 8.1.10)
 - Composer (version 2.4.2)
-- MySQL (15.1)
+- MySQL
 - phpMyAdmin
 - JavaScript
 - Bootstrap (version 5.1)
