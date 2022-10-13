@@ -9,8 +9,9 @@ The website produced is called “The PC Master Race” and it is an e-commerce 
 - MySQL (15.1)
 - phpMyAdmin
 - JavaScript
-- CSS
-- HTML
+- Bootstrap (version 5.1)
+- CSS3
+- HTML5
 
 ## Features
 
