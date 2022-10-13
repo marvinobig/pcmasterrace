@@ -11,7 +11,7 @@ session_start();
 
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
-    <main>
+    <main class="products">
         <h1 class="page-title">Product Page</h1>
         <section class="product-card-container">
             <?php foreach ($product->GetAllProducts() as $item): ?>

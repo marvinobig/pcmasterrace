@@ -18,7 +18,7 @@ $username = $_SESSION["username"];
 <body>
     <?php require "$root/pages/partials/nav.partial.php";?>
 
-    <main>
+    <main class="basket">
         <h1 class="page-title">Basket</h1>
         <section class="basket-actions-container">
             <a href="products.page.php">
