@@ -190,7 +190,7 @@ textarea:focus {
     transition: var(--transition);
 }
 
-.products, .basket {
+.products, .basket, .home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -369,6 +369,40 @@ textarea:focus {
 
 .product-img {
     max-width: 600px;
+}
+
+.welcome {
+    text-align: center;
+    width: 800px;
+    line-height: 2rem;
+}
+
+.site-info {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+}
+
+.site-info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.site-info-card p {
+    font-size: 1.1rem;
+}
+
+.site-info-card:hover {
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 @media only screen and (max-width:720px) {
