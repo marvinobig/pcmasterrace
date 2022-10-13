@@ -2,10 +2,7 @@
 
 $root = $_SERVER["DOCUMENT_ROOT"];
 
-require_once "$root/models/basket.model.php";
-require_once "$root/models/product.model.php";
-require_once "$root/models/user.model.php";
-require_once "$root/core/db/dbConnect.php";
+require "$root/vendor/autoload.php";
 
 $config = require "$root/config.php";
 
