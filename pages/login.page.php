@@ -35,7 +35,7 @@ if (isset($_SESSION["username"])) {
 
         <div class="user-agreements">
             <p>
-                Not yet a member? <a href="../pages/register.page.php">You can register here</a>
+                Not yet a member? <a class="link" href="../pages/register.page.php">Register here</a>
             </p>
         </div>
     </main>

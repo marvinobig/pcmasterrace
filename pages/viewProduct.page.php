@@ -21,7 +21,7 @@ session_start();
         <p>£<?=$item["price"]?></p>
         <h3>Description</h3>
         <p><?=$item["description"]?></p>
-        <a href="../functions/addToBasket.function.php?id='<?=$item['ID']?>'">
+        <a href="../functions/addToBasket.function.php?id=<?=$item['ID']?>">
             <button type="button">
                 Add to basket
             </button>

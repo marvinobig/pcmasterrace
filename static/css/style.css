@@ -16,6 +16,7 @@
     --form-input-color: #ebdede;
     --button-bg-color: #201e1e;
     --button-text-color: #ebdede;
+    --link-color: #1632b1;
 }
 
 /* general styling */
@@ -34,7 +35,7 @@ button {
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
     padding: 2px 15px;
-    border: 2px solid var(--border-color);
+    border: var(--border-size) solid var(--border-color);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
@@ -50,10 +51,17 @@ main {
 
 img {
     aspect-ratio: 1;
-    height: auto;
     width: 100%;
     max-width: 200px;
     border: var(--border-size) solid var(--border-color);
+}
+
+a {
+    color: var(--button-text-color);
+}
+
+a:hover {
+    color: var(--button-text-color);
 }
 
 form {
@@ -69,6 +77,7 @@ fieldset {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 20px;
     width: 100%;
     max-width: 400px;
 }
@@ -111,7 +120,7 @@ legend {
 }
 
 fieldset {
-    border: 2px solid var(--border-color);
+    border: var(--border-size) solid var(--border-color);
     border-radius: var(--border-radius);
 }
 
@@ -155,6 +164,26 @@ textarea:focus {
     background-color: var(--nav-bg-color);
 }
 
+.dropdown, .dropdown-menu {
+    border-radius: var(--border-radius);
+    background-color: var(--nav-bg-color);
+}
+
+.dropdown button {
+    background-color: var(--button-text-color);
+    color: var(--button-bg-color);
+    padding: 2px 15px;
+    border: var(--border-size) solid var(--border-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.dropdown-menu li {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--nav-bg-color);
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -181,11 +210,13 @@ textarea:focus {
     text-align: center;
     width: 120px;
     padding: 5px 10px;
+    color: var(--footer-bg-color);
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
 
 .footer-socials-link:hover {
+    color: var(--footer-bg-color);
     filter: brightness(var(--brightness));
     transition: var(--transition);
 }
@@ -213,7 +244,7 @@ textarea:focus {
     height: 450px;
     width: 100%;
     max-width: 200px;
-    border: 2px solid black;
+    border: var(--border-size) solid black;
     border-radius: var(--border-radius);
     transition: var(--transition);
 }
@@ -265,7 +296,7 @@ textarea:focus {
 
 .basket-item-card {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 20px;
     height: 100%;
@@ -302,6 +333,14 @@ textarea:focus {
 .user-account {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.account-actions {
+    display: flex;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -373,13 +412,15 @@ textarea:focus {
 
 .welcome {
     text-align: center;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     line-height: 2rem;
 }
 
 .site-info {
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
     padding: 20px;
     width: 100%;
 }
@@ -389,7 +430,8 @@ textarea:focus {
     flex-direction: column;
     gap: 20px;
     text-align: center;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 20px;
     border: var(--border-size) solid var(--border-color);
     border-radius: var(--border-radius);
@@ -405,10 +447,49 @@ textarea:focus {
     box-shadow: var(--box-shadow);
 }
 
+.link {
+    color: var(--link-color);
+}
+
+.link:visited {
+    color: var(--link-color);
+}
+
 @media only screen and (max-width:720px) {
     .product-card-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+    }
+
+    .basket-item-card {
+        flex-direction: column;
+        max-width: 200px;
+        max-height: 400px;
+    }
+
+    .product-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .site-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-title {
+        text-align: center;
+    }
+
+    .account-actions {
+        flex-direction: column;
         gap: 20px;
     }
 }

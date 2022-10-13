@@ -23,7 +23,7 @@ $username = $_SESSION["username"];
         <section class="basket-actions-container">
             <a href="products.page.php">
                 <button type="button">
-                    Continue Shopping
+                    Continue
                 </button>
             </a>
             <a href="#">

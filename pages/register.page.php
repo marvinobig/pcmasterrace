@@ -57,10 +57,10 @@ if (isset($_SESSION["username"])) {
         </form>
         <div class="user-agreements">
             <p>
-                By creating an account you agree to our <a href="#">Terms & Privacy</a>
+                By creating an account you agree to our <a class="link" href="#">Terms & Privacy</a>
             </p>
             <p class="login">
-                Already a member? <a href="../pages/login.page.php">You can login here</a>
+                Already a member? <a class="link" href="../pages/login.page.php">Login here</a>
             </p>
         </div>
     </main>

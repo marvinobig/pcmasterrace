@@ -11,13 +11,22 @@
         <div class="nav-right">
             <a class="nav-links" href="pages/products.page.php">Products</a>
 
-            <?php if (!isset($_SESSION["username"])): ?>
-            <a class="nav-links" href="pages/login.page.php">Login</a>
-            <a class="nav-links" href="pages/register.page.php">Register</a>
-            <?php else: ?>
-            <a class="nav-links" href="pages/basket.page.php">Basket</a>
-            <a class="nav-links" href="pages/account.page.php">Account</a>
-            <?php endif?>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    More
+                </button>
+                <ul class="dropdown-menu">
+                    <?php if (!isset($_SESSION["username"])): ?>
+                    <li><a class="nav-links" href="pages/login.page.php">Login</a></li>
+                    <li><a class="nav-links" href="pages/register.page.php">Register</a></li>
+
+                    <?php else: ?>
+                    <li><a class="nav-links" href="pages/basket.page.php">Basket</a></li>
+                    <li><a class="nav-links" href="pages/account.page.php">Account</a></li>
+                    <?php endif?>
+                </ul>
+            </div>
         </div>
     </nav>
 
