@@ -37,8 +37,21 @@ composer install
 
 ### Import Database Tables
 
-To use the database tables for this project import the database tables using a database administration tool like phpMyAdmin.
+- You need to create the database "pc_master_race".
+- To use the database tables for this project import the database tables using a database administration tool like phpMyAdmin.
+- The database tables are in
+
+```bash
+core/db/dbTables
+```
 
 ### Database Connection Setup
 
 As mentioned before, the config.php file in the parent directory will hold everything the website needs to connect to a MySQL database. It uses the default settings for username, host & password to do this but can be easily changed to whatever you have setup.
+
+### Test User
+
+If the tables have been imported correctly using phpMyAdmin, a test user will already be in the users database table for you to test authentication with. This test user is
+
+- Username -> marvinobig
+- Password -> 12345
