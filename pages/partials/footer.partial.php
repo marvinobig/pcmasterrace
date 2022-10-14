@@ -1,7 +1,8 @@
 <footer class="footer">
     <div class="footer-title-container">
         <h2 class="footer-title">PC Master Race E-Commerce Website</h2>
-        <h3 class="footer-title">By Marvin Obigwilo</h3>
+        <h3 class="footer-title"><a class="footer-socials-link" href="https://github.com/marvinobig" target="_blank"
+                rel="noreferrer">marvinobig</a></h3>
     </div>
 
     <div class="footer-socials-container">
