@@ -37,7 +37,7 @@ composer install
 
 ### Import Database Tables
 
-- You need to create the database "pc_master_race".
+- You need to create the database "pc_masterrace".
 - To use the database tables for this project import the database tables using a database administration tool like phpMyAdmin.
 - The database tables are in
 
